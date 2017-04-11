@@ -16,7 +16,8 @@ class UseNamedParametersRule : Rule("use-named-parameters") {
                        emit: (offset: Int, errorMessage: String, canBeAutoCorrected: Boolean) -> Unit) {
         if (node is CompositeElement && node.elementType == CALL_EXPRESSION) {
             val argumentList = node.getChildren(TokenSet.create(KtNodeTypes.VALUE_ARGUMENT_LIST))
-            val arguments = argumentList[0].getChildren(TokenSet.create(KtNodeTypes.VALUE_ARGUMENT))
+            val arguments = argumentList.singleOrNull()?.getChildren(TokenSet.create(KtNodeTypes.VALUE_ARGUMENT))
+                    ?: return
 
             if (arguments.size > 3) {
                 val error = arguments.any {
