@@ -12,7 +12,7 @@ import org.jetbrains.kotlin.com.intellij.psi.tree.TokenSet
  */
 
 val ignoredFunctions = listOf(
-        "listOf", "mapOf", "mutableListOf", "mutableMapOf", "byteArrayOf"
+        "listOf", "mapOf", "mutableListOf", "mutableMapOf", "byteArrayOf", "setOf", "mutableSetOf"
 )
 
 class UseNamedParametersRule : Rule("use-named-parameters") {
