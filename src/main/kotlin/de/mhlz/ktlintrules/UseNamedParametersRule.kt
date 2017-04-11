@@ -19,7 +19,7 @@ class UseNamedParametersRule : Rule("use-named-parameters") {
             val arguments = argumentList.singleOrNull()?.getChildren(TokenSet.create(KtNodeTypes.VALUE_ARGUMENT))
                     ?: return
 
-            if (arguments.size > 3) {
+            if (arguments.size > 4) {
                 val error = arguments.any {
                     it.getChildren(TokenSet.create(KtNodeTypes.VALUE_ARGUMENT_NAME)).isEmpty()
                 }
