@@ -20,10 +20,15 @@ class MaximumLineLengthRule : Rule("maximum-line-length") {
 
             val lines = text.split("\n")
 
-            lines.forEachIndexed { i, line ->
-                if (line.length < 120) return@forEachIndexed
+            val importStatements = node.getChildren(TokenSet.create(KtNodeTypes.IMPORT_LIST))
+            val importTextRange = importStatements.firstOrNull()?.textRange
 
+            lines.forEachIndexed { i, line ->
                 val offset = lines.subList(0, i).map { it.length + 1 }.sum()
+
+                val partOfImportList = importTextRange?.contains(offset) ?: false
+
+                if (line.length < 120 || partOfImportList) return@forEachIndexed
 
                 emit(offset, "This line is too long. Shorten it to less than 120 chars", false)
             }
