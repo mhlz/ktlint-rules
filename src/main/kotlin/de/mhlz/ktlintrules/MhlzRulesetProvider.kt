@@ -8,6 +8,6 @@ import com.github.shyiko.ktlint.core.RuleSetProvider
  */
 class MhlzRulesetProvider : RuleSetProvider {
     override fun get(): RuleSet {
-        return RuleSet("mhlz", UseNamedParametersRule())
+        return RuleSet("mhlz", UseNamedParametersRule(), MaximumLineLengthRule())
     }
 }

@@ -34,7 +34,11 @@ class UseNamedParametersRule : Rule("use-named-parameters") {
                 }
 
                 if (error)
-                    emit(node.startOffset, "Should use named parameters for function calls with more than 4 arguments: ${node.text}", false)
+                    emit(
+                            node.startOffset,
+                            "Should use named parameters for function calls with more than 4 arguments: ${node.text}",
+                            false
+                    )
             }
         }
     }
