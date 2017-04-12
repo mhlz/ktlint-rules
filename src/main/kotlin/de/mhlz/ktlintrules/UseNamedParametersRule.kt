@@ -16,16 +16,22 @@ val ignoredFunctions = listOf(
 )
 
 class UseNamedParametersRule : Rule("use-named-parameters") {
-    override fun visit(node: ASTNode,
-                       autoCorrect: Boolean,
-                       emit: (offset: Int, errorMessage: String, canBeAutoCorrected: Boolean) -> Unit) {
+    override fun visit(
+            node: ASTNode,
+            autoCorrect: Boolean,
+            emit: (offset: Int, errorMessage: String, canBeAutoCorrected: Boolean) -> Unit) {
         if (node is CompositeElement && node.elementType == CALL_EXPRESSION) {
-            val callText = node.getChildren(TokenSet.create(KtNodeTypes.REFERENCE_EXPRESSION)).firstOrNull()?.text
+            val callText = node
+                    .getChildren(TokenSet.create(KtNodeTypes.REFERENCE_EXPRESSION))
+                    .firstOrNull()
+                    ?.text
             if (callText in ignoredFunctions)
                 return
 
             val argumentList = node.getChildren(TokenSet.create(KtNodeTypes.VALUE_ARGUMENT_LIST))
-            val arguments = argumentList.singleOrNull()?.getChildren(TokenSet.create(KtNodeTypes.VALUE_ARGUMENT))
+            val arguments = argumentList
+                    .singleOrNull()
+                    ?.getChildren(TokenSet.create(KtNodeTypes.VALUE_ARGUMENT))
                     ?: return
 
             if (arguments.size > 4) {
@@ -36,7 +42,8 @@ class UseNamedParametersRule : Rule("use-named-parameters") {
                 if (error)
                     emit(
                             node.startOffset,
-                            "Should use named parameters for function calls with more than 4 arguments: ${node.text}",
+                            "Should use named parameters for function calls with more than" +
+                                    "4 arguments: ${node.text}",
                             false
                     )
             }
