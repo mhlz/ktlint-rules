@@ -15,7 +15,6 @@ class NoNullAssertionsRule : Rule("no-null-assertion") {
             emit: (offset: Int, errorMessage: String, canBeAutoCorrected: Boolean) -> Unit
     ) {
         if (node is LeafPsiElement) {
-            println()
             val nodeValue = (node.elementType as? KtSingleValueToken)?.value
 
             if (nodeValue == "!!")
