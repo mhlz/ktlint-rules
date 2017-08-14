@@ -11,7 +11,6 @@ class MhlzRulesetProvider : RuleSetProvider {
         return RuleSet(
                 "mhlz",
                 UseNamedParametersRule(),
-                MaximumLineLengthRule(),
                 NoNullAssertionsRule()
         )
     }
