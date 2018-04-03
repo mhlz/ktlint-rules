@@ -19,7 +19,8 @@ val ignoredFunctions = listOf(
         "byteArrayOf",
         "setOf",
         "mutableSetOf",
-        "arrayOf"
+        "arrayOf",
+        "listOfNotNull",
 )
 
 class UseNamedParametersRule : Rule("use-named-parameters") {
