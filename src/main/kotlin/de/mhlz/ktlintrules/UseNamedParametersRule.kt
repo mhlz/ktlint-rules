@@ -20,7 +20,7 @@ val ignoredFunctions = listOf(
         "setOf",
         "mutableSetOf",
         "arrayOf",
-        "listOfNotNull",
+        "listOfNotNull"
 )
 
 class UseNamedParametersRule : Rule("use-named-parameters") {
