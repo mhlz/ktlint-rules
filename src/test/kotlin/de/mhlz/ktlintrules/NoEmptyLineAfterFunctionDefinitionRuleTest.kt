@@ -100,6 +100,17 @@ fun test() = {
     }
 
     @Test
+    fun `should not report on lambdas without linebreaks`() {
+        val test = """
+fun test() {
+    doSomething("abc") { "test" }
+}
+"""
+        val errors = NoEmptyLineAfterFunctionDefinitionRule().lint(test)
+        assertTrue { errors.isEmpty() }
+    }
+
+    @Test
     fun `should report on lambdas`() {
         val test = """
 fun test() {
