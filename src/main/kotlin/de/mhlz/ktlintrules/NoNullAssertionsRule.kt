@@ -10,9 +10,9 @@ import org.jetbrains.kotlin.lexer.KtSingleValueToken
  */
 class NoNullAssertionsRule : Rule("no-null-assertion") {
     override fun visit(
-            node: ASTNode,
-            autoCorrect: Boolean,
-            emit: (offset: Int, errorMessage: String, canBeAutoCorrected: Boolean) -> Unit
+        node: ASTNode,
+        autoCorrect: Boolean,
+        emit: (offset: Int, errorMessage: String, canBeAutoCorrected: Boolean) -> Unit
     ) {
         if (node is LeafPsiElement) {
             val nodeValue = (node.elementType as? KtSingleValueToken)?.value

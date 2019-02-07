@@ -21,5 +21,4 @@ val shouldNotTrigger = "t!!"
             errors.size == 2 && errors.map { it.line }.toSet() == setOf(2, 3)
         }
     }
-
 }

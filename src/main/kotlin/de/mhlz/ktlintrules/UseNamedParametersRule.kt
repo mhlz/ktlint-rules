@@ -25,9 +25,10 @@ val ignoredFunctions = listOf(
 
 class UseNamedParametersRule : Rule("use-named-parameters") {
     override fun visit(
-            node: ASTNode,
-            autoCorrect: Boolean,
-            emit: (offset: Int, errorMessage: String, canBeAutoCorrected: Boolean) -> Unit) {
+        node: ASTNode,
+        autoCorrect: Boolean,
+        emit: (offset: Int, errorMessage: String, canBeAutoCorrected: Boolean) -> Unit
+    ) {
         if (node is CompositeElement && node.elementType == CALL_EXPRESSION) {
             val callText = node
                     .getChildren(TokenSet.create(KtNodeTypes.REFERENCE_EXPRESSION))

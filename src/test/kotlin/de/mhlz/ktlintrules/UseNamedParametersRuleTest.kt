@@ -28,5 +28,4 @@ fun anotherTest() {
             errors.any { it.line == 5 && it.detail.contains("named") }
         }
     }
-
 }
