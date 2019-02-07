@@ -7,11 +7,10 @@ import com.github.shyiko.ktlint.core.RuleSetProvider
  * @author Mischa Holz
  */
 class MhlzRulesetProvider : RuleSetProvider {
-    override fun get(): RuleSet {
-        return RuleSet(
-                "mhlz",
-                UseNamedParametersRule(),
-                NoNullAssertionsRule()
-        )
-    }
+    override fun get(): RuleSet = RuleSet(
+        "mhlz",
+        UseNamedParametersRule(),
+        NoNullAssertionsRule(),
+        NoEmptyLineAfterFunctionDefinitionRule()
+    )
 }
