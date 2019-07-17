@@ -1,7 +1,7 @@
-package de.mhlz.ktlintrules
+package com.acomodeo.ktlintrules
 
+import com.pinterest.ktlint.test.lint
 import org.junit.Test
-import com.github.shyiko.ktlint.test.lint
 import kotlin.test.assertTrue
 
 /**

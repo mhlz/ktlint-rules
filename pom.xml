@@ -19,15 +19,15 @@
 	    <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.github.shyiko.ktlint</groupId>
+            <groupId>com.pinterest.ktlint</groupId>
             <artifactId>ktlint-core</artifactId>
-            <version>0.30.0</version>
+            <version>0.32.0</version>
 	    <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.github.shyiko.ktlint</groupId>
+            <groupId>com.pinterest.ktlint</groupId>
             <artifactId>ktlint-test</artifactId>
-            <version>0.30.0</version>
+            <version>0.32.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
