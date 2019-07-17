@@ -1,10 +1,10 @@
-package com.acomodeo.ktlintrules
+package de.mhlz.ktlintrules
 
 import com.pinterest.ktlint.test.format
 import com.pinterest.ktlint.test.lint
-import org.junit.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
+import org.junit.Test
 
 class NoEmptyLineAfterFunctionDefinitionRuleTest {
 

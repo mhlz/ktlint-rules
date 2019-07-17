@@ -1,4 +1,4 @@
-package com.acomodeo.ktlintrules
+package de.mhlz.ktlintrules
 
 import com.pinterest.ktlint.core.Rule
 import org.jetbrains.kotlin.com.intellij.lang.ASTNode

@@ -1,12 +1,12 @@
-package com.acomodeo.ktlintrules
+package de.mhlz.ktlintrules
 
-import com.pinterest.ktlint.core.RuleSetProvider
 import com.pinterest.ktlint.core.RuleSet
+import com.pinterest.ktlint.core.RuleSetProvider
 
 /**
  * @author Mischa Holz
  */
-class AcomodeoRulesetProvider : RuleSetProvider {
+class MhlzRulesetProvider : RuleSetProvider {
     override fun get(): RuleSet = RuleSet(
         "mhlz",
         UseNamedParametersRule(),
