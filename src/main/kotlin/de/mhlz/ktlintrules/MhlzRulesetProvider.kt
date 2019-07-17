@@ -1,7 +1,7 @@
 package de.mhlz.ktlintrules
 
-import com.github.shyiko.ktlint.core.RuleSet
-import com.github.shyiko.ktlint.core.RuleSetProvider
+import com.pinterest.ktlint.core.RuleSet
+import com.pinterest.ktlint.core.RuleSetProvider
 
 /**
  * @author Mischa Holz

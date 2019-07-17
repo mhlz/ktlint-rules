@@ -1,6 +1,6 @@
 package de.mhlz.ktlintrules
 
-import com.github.shyiko.ktlint.core.Rule
+import com.pinterest.ktlint.core.Rule
 import org.jetbrains.kotlin.KtNodeTypes
 import org.jetbrains.kotlin.KtNodeTypes.CALL_EXPRESSION
 import org.jetbrains.kotlin.com.intellij.lang.ASTNode

@@ -1,8 +1,8 @@
 package de.mhlz.ktlintrules
 
-import com.github.shyiko.ktlint.test.lint
-import org.junit.Test
+import com.pinterest.ktlint.test.lint
 import kotlin.test.assertTrue
+import org.junit.Test
 
 /**
  * @author Mischa Holz
